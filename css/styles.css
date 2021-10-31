@@ -1,0 +1,407 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --logo-primary-color: #000000;
+  --accent-color: #2196f3;
+  --main-white-color: #ffffff;
+  --light-address-color: rgba(255, 255, 255, 0.6);
+  --dark-accent-color: #2f303a;
+  --grey-color: #f5f4fa;
+  --border-color: #ececec;
+  --project-card-border-color: #eeeeee;
+
+  --header-text-margin-index: 10px;
+  --card-padding-index: 30px;
+  --header-text-margin-portfolio: 4px;
+  --card-padding-portfolio: 20px;
+  --card-margin: 30px;
+  --button-padding: 32px;
+
+  --button-radius: 4px;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  background-color: var(--main-white-color);
+  color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+/*хедер*/
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  /* outline: 1px solid #666; */
+}
+.header-container {
+  align-items: center;
+}
+.header {
+  border-bottom: 1px solid var(--border-color);
+}
+.header-container,
+.site-nav,
+.site-nav-list {
+  display: flex;
+}
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-nav-item + .contact-nav-item {
+  margin-left: 50px;
+}
+
+/*лого*/
+.logo-webstudio {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--accent-color);
+  text-decoration: none;
+
+  display: block;
+  padding-bottom: 25px;
+  padding-top: 24px;
+  margin-right: 93px;
+}
+.studio-logo-part {
+  color: var(--logo-primary-color);
+}
+
+/*навигация по сайту*/
+.nav-link {
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--title-text-color);
+
+  display: block;
+  padding-top: var(--button-padding);
+  padding-bottom: var(--button-padding);
+}
+.site-nav-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+/*контактная информация*/
+.contacts-link {
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+}
+
+/*футер*/
+.light-logo-webstudio {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--accent-color);
+  text-decoration: none;
+
+  display: block;
+  margin-bottom: 20px;
+}
+.light-studio-logo-part {
+  color: var(--main-white-color);
+}
+
+/*контактная информация*/
+.light-contacts-link {
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--light-address-color);
+  text-decoration: none;
+  font-style: normal;
+}
+.list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.light-contacts-link:hover,
+.light-contacts-link:focus {
+  color: var(--accent-color);
+}
+.office-address {
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--main-white-color);
+  font-style: normal;
+
+  display: block;
+  margin-bottom: 9px;
+}
+.footer {
+  background-color: var(--dark-accent-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: start;
+}
+/*Герой */
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+
+  margin-bottom: 30px;
+}
+.hero-container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #f79cd8;
+  text-align: center;
+}
+
+.btn-order-service {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  font-family: inherit;
+  background-color: var(--accent-color);
+  color: var(--main-white-color);
+  cursor: pointer;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: var(--button-padding);
+  padding-right: var(--button-padding);
+  border-radius: var(--button-radius);
+  border-color: transparent;
+  text-align: center;
+}
+
+/*секции*/
+/*списки/карточки елементов*/
+.team-list,
+.works-list,
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*преимущества*/
+.advantage-header {
+  line-height: 1.14;
+  color: var(--title-text-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  margin-bottom: var(--header-text-margin-index);
+}
+.advantage-text {
+  line-height: 1.7;
+}
+.advantages-title {
+  display: none;
+}
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-margin));
+  margin-top: calc(-1 * var(--card-margin));
+}
+.advantages-list-item {
+  flex-basis: calc((100% - 4 * var(--card-margin)) / 4);
+  margin-left: var(--card-margin);
+  margin-top: var(--card-margin);
+}
+/*.advantages-list-item {
+  width: calc((100% - 3 * var(--card-margin)) / 4);
+}
+
+.advantages-list-item:not(:nth-child(4n)) {
+  margin-right: var(--card-margin);
+}
+*/
+/*Чем мы занимаемся*/
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-text-color);
+
+  margin-bottom: 50px;
+}
+.team-member-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--title-text-color);
+
+  margin-bottom: var(--header-text-margin-index);
+}
+.team-member-position {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team-container {
+  background-color: var(--grey-color);
+}
+
+.team-member-card-content {
+  padding-top: var(--card-padding-index);
+  padding-bottom: var(--card-padding-index);
+  text-align: center;
+}
+.team-list-item {
+  flex-basis: calc((100% - 4 * var(--card-margin)) / 4);
+  margin-left: var(--card-margin);
+  margin-top: var(--card-margin);
+  background-color: var(--main-white-color);
+}
+.team-list {
+  margin-left: calc(-1 * var(--card-margin));
+  margin-top: calc(-1 * var(--card-margin));
+}
+/*
+.team-list-item {
+  width: calc((100% - 3 * var(--card-margin)) / 4);
+  background-color: var(--main-white-color);
+}
+.team-list-item:not(:nth-child(4n)) {
+  margin-right: var(--card-margin);
+}*/
+
+.works-section {
+  padding-top: 0;
+}
+.works-list-item {
+  flex-basis: calc((100% - 3 * var(--card-margin)) / 3);
+  margin-left: var(--card-margin);
+  margin-top: var(--card-margin);
+}
+.works-list {
+  margin-left: calc(-1 * var(--card-margin));
+  margin-top: calc(-1 * var(--card-margin));
+}
+/*
+.works-list-item {
+  width: calc((100% - 2 * (var(--card-margin))) / 3);
+}
+.works-list-item:not(:nth-child(3n)) {
+  margin-right: var(--card-margin);
+}*/
+
+/*портфолио*/
+/*фильтф*/
+.btn-filter {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  color: var(--title-text-color);
+  background-color: var(--grey-color);
+  cursor: pointer;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: var(--button-radius);
+  border-color: transparent;
+  text-align: center;
+}
+.btn-filter:hover,
+.btn-filter:focus {
+  background-color: var(--accent-color);
+  color: var(--main-white-color);
+}
+.project-name {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+.project-type {
+  font-size: 16px;
+  line-height: 1.88;
+}
+.projects-title {
+  display: none;
+}
+.project-card-content {
+  padding-top: var(--card-padding-portfolio);
+  padding-bottom: var(--card-padding-portfolio);
+  border: 1px solid var(--project-card-border-color);
+  border-top: none;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.projects-list-item {
+  flex-basis: calc((100% - 3 * var(--card-margin)) / 3);
+  margin-left: var(--card-margin);
+  margin-top: var(--card-margin);
+}
+.projects-list {
+  margin-left: calc(-1 * var(--card-margin));
+  margin-top: calc(-1 * var(--card-margin));
+}
+
+/*.projects-list-item:not(:nth-child(3n)) {
+  margin-right: var(--card-margin);
+}
+.projects-list-item:nth-child(-n + 6) {
+  margin-bottom: var(--card-margin);
+}*/
+
+.filter-list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.filter-list-item + .filter-list-item {
+  margin-left: 8px;
+}
